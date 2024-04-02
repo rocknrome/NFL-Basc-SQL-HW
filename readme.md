@@ -1,4 +1,4 @@
-Schema and seed
+# Schema and seed
 You are provided with a schema file schema.sql and two seed files players.sql, teams.sql that are also in the nfl_seed_data folder. Create a new database called nfl and use the schema and seed file to populate your database.
 
 🔴 "Commit: NFL db seeded"
@@ -6,7 +6,7 @@ Record your answers to Step 3 in a file called nfl.sql.
 
 Challenge: Complete each part with a single SQL expression. That is possible, but for some queries, it will involve learning how to use compound SQL expressions.
 
-Queries
+# Queries
 Some queries may require more than one command (i.e. you may need to get information about a team before you can complete a query for players). Test each command in PSQL to make sure it is correct.
 
 List the names of all NFL teams
