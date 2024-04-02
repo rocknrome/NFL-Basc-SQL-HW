@@ -14,16 +14,16 @@ SELECT head_coach FROM teams WHERE conference = 'AFC' AND division = 'South';
 SELECT COUNT(*) FROM players;
 
 -- 5. The team names and head coaches of the NFC North and AFC East
-
+SELECT name, head_coach FROM teams WHERE division IN ('North', 'East') AND conference IN ('NFC', 'AFC');
 
 -- 6. The 50 players with the highest salaries
-
+SELECT * FROM players ORDER BY salary DESC LIMIT 50;
 
 -- 7. The average salary of all NFL players
-
+SELECT AVG(salary) FROM players;
 
 -- 8. The names and positions of players with a salary above 10_000_000
-
+SELECT name, position FROM players WHERE salary > 10000000;
 
 -- 9. The player with the highest salary in the NFL
 
