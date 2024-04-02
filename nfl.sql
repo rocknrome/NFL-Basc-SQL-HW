@@ -26,18 +26,19 @@ SELECT AVG(salary) FROM players;
 SELECT name, position FROM players WHERE salary > 10000000;
 
 -- 9. The player with the highest salary in the NFL
-
+SELECT name, position FROM players ORDER BY salary DESC LIMIT 1;
 
 -- 10. The name and position of the first 100 players with the lowest salaries
-
+SELECT name, position FROM players ORDER BY salary ASC LIMIT 100;
 
 -- 11. The average salary for a DE in the nfl
-
+SELECT AVG(salary) FROM players WHERE position = 'DE';
 
 -- 12. The names of all the players on the Buffalo Bills
-
+SELECT p.name FROM players p JOIN teams t ON p.team_id = t.id WHERE t.name = 'Buffalo Bills';
 
 -- 13. The total salary of all players on the New York Giants
-
+SELECT SUM(p.salary) FROM players p JOIN teams t ON p.team_id = t.id WHERE t.name = 'New York Giants';
 
 -- 14. The player with the lowest salary on the Green Bay Packers
+SELECT p.name FROM players p JOIN teams t ON p.team_id = t.id WHERE t.name = 'Green Bay Packers' ORDER BY p.salary ASC LIMIT 1;
